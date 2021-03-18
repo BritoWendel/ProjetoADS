@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Chao
+  - Armadilha
+  - Trampolin
   layers:
   - Default
   - TransparentFX

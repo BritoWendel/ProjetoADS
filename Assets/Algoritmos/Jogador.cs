@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Jogador : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class Jogador : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public float ForcaDoPulo;
     public Animator Animator;
+    public float ForcaDoTrampolin;
     //Variaveis privadas
     private bool podePular;
     EstadosDoJogador Estado;
@@ -57,6 +56,14 @@ public class Jogador : MonoBehaviour
     {
        
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trampolin"))
+        {
+            Vector2 forca = Vector2.up;
+            Rigidbody2D.AddForce(forca * ForcaDoTrampolin * Time.deltaTime, ForceMode2D.Impulse);
+        }
+    }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Chao"))
@@ -67,9 +74,4 @@ public class Jogador : MonoBehaviour
         if (collision.gameObject.CompareTag("Chao"))
             podePular = false;
     }
-}
-enum EstadosDoJogador
-{
-    Ocioso = 1,
-    Andando = 2
 }
