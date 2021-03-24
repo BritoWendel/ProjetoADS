@@ -11,17 +11,8 @@ public class Jogador : MonoBehaviour
     public float ForcaDoTrampolin;
     //Variaveis privadas
     private bool podePular;
-    EstadosDoJogador Estado;
-    void Start()
-    {
-        Estado = EstadosDoJogador.Ocioso;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {   
-        
-    }
+
     private void FixedUpdate()
     {
         Andar();
@@ -32,8 +23,9 @@ public class Jogador : MonoBehaviour
         float eixohorizintal = Input.GetAxis("Horizontal");
         Flipar(eixohorizintal);
         eixohorizintal *= VelocidadeDeMovimento * Time.deltaTime;
-        Vector2 forca = new Vector2(eixohorizintal, 0);
-        Rigidbody2D.AddForce(forca, ForceMode2D.Force);
+        Vector2 forca = new Vector2 (eixohorizintal, 0);
+        Rigidbody2D.transform.Translate(forca);
+        //Rigidbody2D.AddForce(forca, ForceMode2D.Force);
     }
     void Flipar(float valordoeixox)
     {
@@ -48,13 +40,9 @@ public class Jogador : MonoBehaviour
         {
             float eixodopulo = Input.GetAxis("Jump");
             eixodopulo *= ForcaDoPulo * Time.fixedDeltaTime;
-            Vector2 forca = new Vector2(0, eixodopulo); 
+            Vector2 forca = new Vector2(0, eixodopulo);
             Rigidbody2D.AddForce(forca, ForceMode2D.Impulse);
         }
-    }
-    void Animar()
-    {
-       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
