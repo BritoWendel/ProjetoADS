@@ -5,6 +5,8 @@ public class Plataforma : MonoBehaviour
     public Rigidbody2D Rigidbody2D;
     public float LimiteBaixoOuEsquerda, LimiteCimaOuDireita, Velocidade;
     public EixoDeMovimento EixoDeMovimento;
+    public Animator Animator;
+    public bool EstaMovendo;
     Vector3 direction;
     private void Start()
     {
@@ -12,6 +14,8 @@ public class Plataforma : MonoBehaviour
             direction = Vector3.up;
         else
             direction = Vector3.right;
+        if (EstaMovendo)
+            Animator.SetBool("Movendo", true);
     }
     private void FixedUpdate()
     {

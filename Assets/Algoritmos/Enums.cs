@@ -9,6 +9,6 @@ public enum EixoDeMovimento
 }
 enum EstadosDoJogador
 {
-    Ocioso = 1,
-    Andando = 2
+    NoChao = 1,
+    NoAr = 2
 }
