@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Jogador : MonoBehaviour
 {
@@ -10,14 +11,17 @@ public class Jogador : MonoBehaviour
     public Animator Animator;
     public float ForcaDoTrampolin;
     public Vector2 Velocidade;
+    public Text QuantidadeDeFrutas;
     public bool Morreu { get { return morreu; } set { morreu = value; } }
     //Variaveis privadas
     private bool podePular, morreu;
-    private float xAtual;
+    private float frutas;
     private EstadosDoJogador Estado;
     float eixohorizintal, eixodopulo;
     private void Start()
     {
+        QuantidadeDeFrutas = FindObjectOfType<Text>();
+        frutas = 0;
         morreu = false;
         Estado = EstadosDoJogador.NoAr;
     }
@@ -89,7 +93,11 @@ public class Jogador : MonoBehaviour
     {
         Vector2 forca = Vector2.up;
         Rigidbody2D.AddForce(forca * ForcaDoTrampolin * Time.deltaTime, ForceMode2D.Impulse);
-
+    }
+    private void ColetarFrutas()
+    {
+        frutas++;
+        QuantidadeDeFrutas.text = frutas.ToString();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -118,5 +126,7 @@ public class Jogador : MonoBehaviour
             Debug.Log("Morreu");
             morreu = true;
         }
+        if (collision.gameObject.CompareTag("Fruta"))
+            ColetarFrutas();
     }
 }
