@@ -6,22 +6,23 @@ public class Fogo : MonoBehaviour
 {
     public CapsuleCollider2D CapsuleCollider2D;
     public Animator Animator;
-    public float TimeOn, TimeOff;
+    public float TempoAceso, TempoApagado;
     private float time;
 
     private void Start()
     {
+        CapsuleCollider2D = GetComponentInChildren<CapsuleCollider2D>();
         time = 0;
-        TimeOn += TimeOff;
+        TempoAceso += TempoApagado;
     }
     private void Update()
     {
         time += Time.deltaTime;
-        if(time >= TimeOff)
+        if(time >= TempoApagado)
         {
             Acender();
         }
-        if(time >= TimeOn)
+        if(time >= TempoAceso)
         {
             time = 0;
             Apagar();

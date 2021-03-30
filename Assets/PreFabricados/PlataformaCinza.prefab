@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6844105161272508363}
   - component: {fileID: 2979794953964872553}
   - component: {fileID: -5546878334464437894}
+  - component: {fileID: -1132849016253330406}
   m_Layer: 0
   m_Name: PlataformaCinza
-  m_TagString: Chao
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +123,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 54
+    m_Bits: 4294967295
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -168,3 +169,24 @@ MonoBehaviour:
   LimiteCimaOuDireita: 0
   Velocidade: 0
   EixoDeMovimento: 1
+  Animator: {fileID: -1132849016253330406}
+  EstaMovendo: 0
+--- !u!95 &-1132849016253330406
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5595313944885416480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98d32e9f75233184fb24fa0e8c05dc54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

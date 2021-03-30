@@ -8,6 +8,8 @@ TagManager:
   - Armadilha
   - Trampolin
   - Fruta
+  - Plataforma
+  - Inimigo
   layers:
   - Default
   - TransparentFX
