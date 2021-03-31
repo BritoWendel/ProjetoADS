@@ -122,10 +122,8 @@ public class Jogador : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Armadilha") || collision.gameObject.CompareTag("Inimigo"))
-        {
-            Debug.Log("Morreu");
             morreu = true;
-        }
+
         if (collision.gameObject.CompareTag("Fruta"))
             ColetarFrutas();
     }
