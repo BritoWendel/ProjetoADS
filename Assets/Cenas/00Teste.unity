@@ -937,6 +937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7847377063764239713, guid: 2de28bb37341fe84ba804a1d84d12636,
         type: 3}
+      propertyPath: ForcaDoPulo
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847377063764239713, guid: 2de28bb37341fe84ba804a1d84d12636,
+        type: 3}
       propertyPath: QuantidadeDeFrutas
       value: 
       objectReference: {fileID: 156086294}

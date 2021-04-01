@@ -148,9 +148,11 @@ MonoBehaviour:
   Rigidbody2D: {fileID: 1922455860263326884}
   VelocidadeDeMovimento: 2
   SpriteRenderer: {fileID: 7478933852175278966}
-  ForcaDoPulo: 100
+  ForcaDoPulo: 200
   Animator: {fileID: 1074822888}
   ForcaDoTrampolin: 300
+  Velocidade: {x: 0, y: 0}
+  QuantidadeDeFrutas: {fileID: 0}
 --- !u!95 &1074822888
 Animator:
   serializedVersion: 3

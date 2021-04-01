@@ -103,12 +103,15 @@ public class Jogador : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trampolin"))
             ImpulsionarNoTrampolin();
+        if (collision.gameObject.CompareTag("Chao") || collision.gameObject.CompareTag("Plataforma"))
+        {
+            podePular = true;
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Chao") || collision.gameObject.CompareTag("Plataforma"))
         {
-            podePular = true;
             Estado = EstadosDoJogador.NoChao;
         }
     }
