@@ -3,9 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Fase : MonoBehaviour
 {
-    public Jogador Jogador;
+    Jogador Jogador;
     public int NumeroDaFase;
-   private void Reiniciar()
+
+    private void Start()
+    {
+        Jogador = FindObjectOfType<Jogador>();
+    }
+    private void Reiniciar()
     {
         if (Jogador.Morreu)
         {

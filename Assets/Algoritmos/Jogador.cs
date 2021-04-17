@@ -11,12 +11,12 @@ public class Jogador : MonoBehaviour
     public Animator Animator;
     public float ForcaDoTrampolin;
     public Vector2 Velocidade;
-    public Text QuantidadeDeFrutas;
     public bool Morreu { get { return morreu; } set { morreu = value; } }
     //Variaveis privadas
     private bool podePular, morreu;
     private float frutas;
     private EstadosDoJogador Estado;
+    private Text QuantidadeDeFrutas;
     float eixohorizintal, eixodopulo;
     private void Start()
     {
