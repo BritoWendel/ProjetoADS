@@ -14,3 +14,8 @@ public enum DirecaoDoAlvo
     AEsquerda = 2,
     ForaDeAlcance = 3
 }
+public enum EstadosDaCabecaDePedra
+{
+    NoAlto = 1,
+    EmBaixo = 2
+}

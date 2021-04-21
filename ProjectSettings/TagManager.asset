@@ -10,6 +10,8 @@ TagManager:
   - Fruta
   - Plataforma
   - Inimigo
+  - Teto
+  - Pedra
   layers:
   - Default
   - TransparentFX

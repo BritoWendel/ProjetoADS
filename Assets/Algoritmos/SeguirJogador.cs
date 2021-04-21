@@ -14,7 +14,6 @@ public class SeguirJogador : MonoBehaviour
         Jogador = FindObjectOfType<Jogador>();
         transform.position = new Vector3(Jogador.transform.position.x, Jogador.transform.position.y, -10);
         CameraOffset = transform.position - Jogador.transform.position;
-
     }
     private void FixedUpdate()
     {

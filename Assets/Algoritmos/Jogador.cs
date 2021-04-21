@@ -13,7 +13,7 @@ public class Jogador : MonoBehaviour
     public Vector2 Velocidade;
     public bool Morreu { get { return morreu; } set { morreu = value; } }
     //Variaveis privadas
-    private bool podePular, morreu;
+    public bool podePular, morreu, estanaplataforma, tocounoteto, tocounochao;
     private float frutas;
     private EstadosDoJogador Estado;
     private Text QuantidadeDeFrutas;
@@ -30,9 +30,11 @@ public class Jogador : MonoBehaviour
         eixohorizintal = Input.GetAxis("Horizontal");
         eixodopulo = Input.GetAxis("Jump");
         Animar(eixohorizintal);
+        Morrer();
     }
     private void FixedUpdate()
     {
+
         Velocidade = Rigidbody2D.velocity;
         
         Andar(eixohorizintal);
@@ -99,34 +101,46 @@ public class Jogador : MonoBehaviour
         frutas++;
         QuantidadeDeFrutas.text = frutas.ToString();
     }
+    void Morrer()
+    {
+        morreu = estanaplataforma && tocounoteto;
+        morreu = estanaplataforma && tocounochao;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Trampolin"))
             ImpulsionarNoTrampolin();
         if (collision.gameObject.CompareTag("Chao") || collision.gameObject.CompareTag("Plataforma"))
-        {
             podePular = true;
-        }
+        if (collision.gameObject.CompareTag("Teto"))
+            tocounoteto = true;
+        if (collision.gameObject.CompareTag("Chao"))
+            tocounochao = true;
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Chao") || collision.gameObject.CompareTag("Plataforma"))
-        {
             Estado = EstadosDoJogador.NoChao;
-        }
+
+        if (collision.gameObject.CompareTag("Plataforma"))
+            estanaplataforma = true;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Chao") || collision.gameObject.CompareTag("Plataforma"))
-        {
             Estado = EstadosDoJogador.NoAr;
-        }
+        if (collision.gameObject.CompareTag("Plataforma"))
+            estanaplataforma = false;
+        if (collision.gameObject.CompareTag("Teto"))
+            tocounoteto = false;
+        if (collision.gameObject.CompareTag("Chao"))
+            tocounochao = false;
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Armadilha") || collision.gameObject.CompareTag("Inimigo"))
             morreu = true;
-
         if (collision.gameObject.CompareTag("Fruta"))
             ColetarFrutas();
     }
