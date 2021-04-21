@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1132849016253330406}
   m_Layer: 0
   m_Name: PlataformaCinza
-  m_TagString: Plataforma
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

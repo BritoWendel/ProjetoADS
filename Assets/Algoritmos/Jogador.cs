@@ -34,9 +34,7 @@ public class Jogador : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
         Velocidade = Rigidbody2D.velocity;
-        
         Andar(eixohorizintal);
         Pular(eixodopulo);
     }
@@ -56,7 +54,7 @@ public class Jogador : MonoBehaviour
     }
     void Pular(float eixodopulo)
     {
-        if (podePular && eixodopulo > 0)
+        if (podePular && eixodopulo > 0 && Velocidade.y == 0)
         {
             eixodopulo *= ForcaDoPulo * Time.fixedDeltaTime;
             Vector2 forca = new Vector2(0, eixodopulo);

@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1924596697281590137}
   m_Layer: 0
   m_Name: Tronco
-  m_TagString: Plataforma
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

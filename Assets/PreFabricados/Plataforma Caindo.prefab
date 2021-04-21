@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7110356871854742969}
   m_Layer: 0
   m_Name: Plataforma Caindo
-  m_TagString: Plataforma
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

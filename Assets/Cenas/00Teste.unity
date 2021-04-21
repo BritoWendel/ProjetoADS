@@ -3503,8 +3503,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5546878334464437894, guid: c4c658c0d3fd56649828eafcaa36373f,
         type: 3}
+      propertyPath: Velocidade
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5546878334464437894, guid: c4c658c0d3fd56649828eafcaa36373f,
+        type: 3}
       propertyPath: EstaMovendo
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5546878334464437894, guid: c4c658c0d3fd56649828eafcaa36373f,
+        type: 3}
+      propertyPath: EixoDeMovimento
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5546878334464437894, guid: c4c658c0d3fd56649828eafcaa36373f,
+        type: 3}
+      propertyPath: LimiteCimaOuDireita
+      value: -17.602
+      objectReference: {fileID: 0}
+    - target: {fileID: -5546878334464437894, guid: c4c658c0d3fd56649828eafcaa36373f,
+        type: 3}
+      propertyPath: LimiteBaixoOuEsquerda
+      value: -18.039
       objectReference: {fileID: 0}
     - target: {fileID: 1865288787580036916, guid: c4c658c0d3fd56649828eafcaa36373f,
         type: 3}
@@ -3514,12 +3534,12 @@ PrefabInstance:
     - target: {fileID: 1865288787580036916, guid: c4c658c0d3fd56649828eafcaa36373f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.631
+      value: -17.597
       objectReference: {fileID: 0}
     - target: {fileID: 1865288787580036916, guid: c4c658c0d3fd56649828eafcaa36373f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.863
+      value: -1.301
       objectReference: {fileID: 0}
     - target: {fileID: 1865288787580036916, guid: c4c658c0d3fd56649828eafcaa36373f,
         type: 3}

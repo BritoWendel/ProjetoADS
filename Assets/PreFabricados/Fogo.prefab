@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1210143023899582375}
   m_Layer: 0
   m_Name: Fogo
-  m_TagString: Plataforma
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63f9db6bf0d6f341a3d616721e3f957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CapsuleCollider2D: {fileID: 0}
   Animator: {fileID: 1210143023899582375}
   TempoAceso: 0
   TempoApagado: 0

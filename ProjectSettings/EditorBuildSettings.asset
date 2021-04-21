@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/03fase.unity
     guid: 6d702e312699d6c459fc4ea06140e394
+  - enabled: 1
+    path: Assets/Cenas/04fase.unity
+    guid: 109eedee3aab35c46a1bc2e1310ce766
+  - enabled: 1
+    path: Assets/Cenas/05fase.unity
+    guid: c7203f28a79c99048b164d812576cd21
   m_configObjects: {}
