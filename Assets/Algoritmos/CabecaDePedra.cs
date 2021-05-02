@@ -4,18 +4,16 @@ public class CabecaDePedra : MonoBehaviour
 {
     Rigidbody2D Rigidbody2D;
     Animator Animator;
-    public float VelocidadeDaSubida, VelocidadeDaDescida, timer, TempoDeEspera;
-    public EstadosDaCabecaDePedra Estado;
+    public float VelocidadeDaSubida, VelocidadeDaDescida, TempoDeEspera;
+    private float timer;
+    private EstadosDaCabecaDePedra Estado;
     Area Area;
     
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-        VelocidadeDaSubida = 0.6f;
-        VelocidadeDaDescida = 1.2f;
         timer = 0;
-        TempoDeEspera = 2;
         Estado = EstadosDaCabecaDePedra.NoAlto;
         Area = GetComponentInChildren<Area>();
     }

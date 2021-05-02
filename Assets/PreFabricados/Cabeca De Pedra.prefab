@@ -85,7 +85,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8224814651835076165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.973, y: 0.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -177,11 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a3dd7b219cec54ba80479766102397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VelocidadeDaSubida: 0
-  VelocidadeDaDescida: 0
-  timer: 0
-  TempoDeEspera: 0
-  Estado: 0
+  VelocidadeDaSubida: 0.6
+  VelocidadeDaDescida: 1.2
+  TempoDeEspera: 2
 --- !u!61 &8224814651835076218
 BoxCollider2D:
   m_ObjectHideFlags: 0
