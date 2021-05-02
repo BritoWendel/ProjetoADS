@@ -4,8 +4,9 @@ public class Cogumelo : MonoBehaviour
 {
     Rigidbody2D Rigidbody2D;
     SpriteRenderer SpriteRenderer;
+    CapsuleCollider2D CapsuleCollider2D;
     Animator Animator;
-    float direcao, timer, timer2;
+    float direcao, timer, timer2, velocidade;
     public float VelocidadeDeMovimento;
     bool EstaMovendo, EstaMorrendo;
     // Start is called before the first frame update
@@ -13,10 +14,13 @@ public class Cogumelo : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        CapsuleCollider2D = GetComponentInChildren<CapsuleCollider2D>();
         Animator = GetComponent<Animator>();
         direcao = 1;
         timer = 0;
         timer2 = 0;
+        velocidade = VelocidadeDeMovimento;
+        CapsuleCollider2D.enabled = true;
     }
 
     // Update is called once per frame
@@ -36,13 +40,16 @@ public class Cogumelo : MonoBehaviour
     {
         if(timer > 3 && timer < 8)
         {
-            if (direcao == 0)
+            if (!EstaMorrendo)
+            {
+                VelocidadeDeMovimento = velocidade;
                 if (SpriteRenderer.flipX)
                     direcao = 1;
                 else
                     direcao = -1;
-            Rigidbody2D.MovePosition(Rigidbody2D.position + new Vector2(direcao, 0) * Time.deltaTime * VelocidadeDeMovimento);
-            EstaMovendo = true;
+                Rigidbody2D.MovePosition(Rigidbody2D.position + new Vector2(direcao, 0) * Time.deltaTime * VelocidadeDeMovimento);
+                EstaMovendo = true;
+            }
         }
     }
     void Flipar()
@@ -59,14 +66,17 @@ public class Cogumelo : MonoBehaviour
         else if (!EstaMorrendo && !EstaMovendo)
             Animator.SetBool("Andando", false);
         else
+        {
+            Animator.SetBool("Andando", false);
             Animator.SetBool("Morrendo", true);
+        }
 
     }
     void Parar()
     {
         if(timer < 2)
         {
-            direcao = 0;
+            VelocidadeDeMovimento = 0;
             EstaMovendo = false;
         }
     }
@@ -83,6 +93,8 @@ public class Cogumelo : MonoBehaviour
     {
         if(EstaMorrendo)
         {
+            CapsuleCollider2D.enabled = false;
+            VelocidadeDeMovimento = 0;
             direcao = 0;
             EstaMovendo = false;
         }
