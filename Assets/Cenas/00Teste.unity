@@ -4879,6 +4879,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 430846415575448225, guid: 032ee821ef4465842b3d67526b6adead,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7433630215271975172, guid: 032ee821ef4465842b3d67526b6adead,
         type: 3}
       propertyPath: m_Name

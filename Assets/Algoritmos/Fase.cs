@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 public class Fase : MonoBehaviour
 {
     Jogador Jogador;
+    AudioSource AudioSource;
     public int NumeroDaFase;
+    public AudioClip AudioClip;
 
     private void Start()
     {
         Jogador = FindObjectOfType<Jogador>();
+        AudioSource = GetComponent<AudioSource>();
+        AudioSource.clip = AudioClip;
+        AudioSource.Play();
     }
     private void Reiniciar()
     {
