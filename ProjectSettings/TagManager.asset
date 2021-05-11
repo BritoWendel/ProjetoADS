@@ -49,3 +49,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Nuvem
+    uniqueID: 1411213103
+    locked: 0
+  - name: Decoracao
+    uniqueID: 2709514769
+    locked: 0
+  - name: Chao
+    uniqueID: 3328275029
+    locked: 0
+  - name: Objeto
+    uniqueID: 2074600025
+    locked: 0
+  - name: Inimigo
+    uniqueID: 3360759197
+    locked: 0
+  - name: Jogador
+    uniqueID: 3877337251
+    locked: 0
