@@ -8,6 +8,7 @@ public class Bala : MonoBehaviour
     private void Update()
     {
         Mover();
+        DestruirBala();
     }
     private void Mover()
     {
@@ -15,8 +16,9 @@ public class Bala : MonoBehaviour
         if(timer >0.4)
             transform.position += Direcao * Velocidade * Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void DestruirBala()
     {
-        Destroy(gameObject);
+        if (timer > 5)
+            Destroy(gameObject);
     }
 }
