@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumeroDaFase: 0
   AudioClip: {fileID: 8300000, guid: ab241e6ba30172c419e4a071a035fbaa, type: 3}
+  MusicaFinal: {fileID: 8300000, guid: 68200acbac8f92141987986cf7acd3ea, type: 3}
 --- !u!82 &430846415575448225
 AudioSource:
   m_ObjectHideFlags: 0
