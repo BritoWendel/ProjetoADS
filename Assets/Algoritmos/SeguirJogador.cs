@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SeguirJogador : MonoBehaviour
 {
@@ -14,6 +12,7 @@ public class SeguirJogador : MonoBehaviour
         Jogador = FindObjectOfType<Jogador>();
         transform.position = new Vector3(Jogador.transform.position.x, Jogador.transform.position.y, -10);
         CameraOffset = transform.position - Jogador.transform.position;
+        CameraOffset.y = CameraOffset.y + 0.5f;
     }
     private void FixedUpdate()
     {
