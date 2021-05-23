@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 80135112}
   - component: {fileID: 80135111}
   m_Layer: 5
-  m_Name: Button Fase 3
+  m_Name: Button Fase 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0096436, y: -107.9}
+  m_AnchoredPosition: {x: -1.0096436, y: -27.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &80135111
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 115188442}
   - component: {fileID: 115188441}
   m_Layer: 5
-  m_Name: Button Fase 4
+  m_Name: Button Fase 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0096436, y: -147.9}
+  m_AnchoredPosition: {x: -1.0096436, y: -68.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115188441
@@ -655,7 +655,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INICIAR FASE 2
+  m_Text: 'INICIAR FASE 4
+
+'
 --- !u!222 &284048035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -799,7 +801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INICIAR FASE 1
+  m_Text: INICIAR FASE 3
 --- !u!222 &319393533
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1219,7 +1221,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INICIAR FASE 4
+  m_Text: INICIAR FASE 2
 --- !u!222 &853400865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1494,7 +1496,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'INICIAR FASE 3
+  m_Text: 'INICIAR FASE 1
+
 
 '
 --- !u!222 &1211373960
@@ -1895,7 +1898,7 @@ GameObject:
   - component: {fileID: 1884705068}
   - component: {fileID: 1884705067}
   m_Layer: 5
-  m_Name: Button Fase 1
+  m_Name: Button Fase 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1918,7 +1921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0096436, y: -27.899994}
+  m_AnchoredPosition: {x: -1.0096436, y: -110.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884705067
@@ -2025,7 +2028,7 @@ GameObject:
   - component: {fileID: 2101486656}
   - component: {fileID: 2101486655}
   m_Layer: 5
-  m_Name: Button Fase 2
+  m_Name: Button Fase 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2048,7 +2051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0096436, y: -67.899994}
+  m_AnchoredPosition: {x: -1.0096436, y: -152.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101486655
