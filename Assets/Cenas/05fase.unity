@@ -60778,7 +60778,7 @@ PrefabInstance:
     - target: {fileID: 7433630215271975175, guid: 032ee821ef4465842b3d67526b6adead,
         type: 3}
       propertyPath: NumeroDaFase
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 032ee821ef4465842b3d67526b6adead, type: 3}

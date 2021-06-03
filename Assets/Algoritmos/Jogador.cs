@@ -13,7 +13,7 @@ public class Jogador : MonoBehaviour
     public Vector2 Velocidade;
     public bool Morreu { get { return morreu; } set { morreu = value; } }
     //Variaveis privadas
-    public bool podePular, morreu, estanaplataforma, tocounoteto, tocounochao;
+    private bool podePular, morreu, estanaplataforma, tocounoteto, tocounochao;
     private float frutas;
     private EstadosDoJogador Estado;
     private Text QuantidadeDeFrutas;
@@ -92,7 +92,7 @@ public class Jogador : MonoBehaviour
     void ImpulsionarNoTrampolin()
     {
         Vector2 forca = Vector2.up;
-        Rigidbody2D.AddForce(forca * ForcaDoTrampolin * Time.deltaTime, ForceMode2D.Impulse);
+        Rigidbody2D.AddForce(ForcaDoTrampolin * Time.deltaTime * forca, ForceMode2D.Impulse);
     }
     private void ColetarFrutas()
     {
@@ -123,9 +123,10 @@ public class Jogador : MonoBehaviour
         if (collision.gameObject.CompareTag("Chao"))
             Estado = EstadosDoJogador.NoChao;
         if(collision.gameObject.CompareTag("Plataforma"))
+        {
             Estado = EstadosDoJogador.NoChao;
-        if (collision.gameObject.CompareTag("Plataforma"))
             estanaplataforma = true;
+        }            
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -140,6 +141,8 @@ public class Jogador : MonoBehaviour
             tocounoteto = false;
         if (collision.gameObject.CompareTag("Chao"))
             tocounochao = false;
+        if (collision.gameObject.CompareTag("Trampolin"))
+            Estado = EstadosDoJogador.NoAr;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

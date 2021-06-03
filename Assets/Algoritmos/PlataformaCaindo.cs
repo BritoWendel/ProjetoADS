@@ -29,9 +29,11 @@ public class PlataformaCaindo : MonoBehaviour
             bool cair = Timer > TempoParaCair;
             if (cair)
             {
-                Rigidbody2D.MovePosition(Rigidbody2D.position + (Vector2)Direcao * Velocidade * Time.deltaTime);
+                Rigidbody2D.MovePosition(Rigidbody2D.position + Time.deltaTime * Velocidade * (Vector2)Direcao);
                 Animator.SetTrigger("Desligar");
             }
+            if (Timer > 8.0f)
+                Destroy(gameObject);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

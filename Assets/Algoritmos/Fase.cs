@@ -65,6 +65,6 @@ public class Fase : MonoBehaviour
     }
     public void VoltarParaOMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

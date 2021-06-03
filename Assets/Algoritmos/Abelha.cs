@@ -4,11 +4,16 @@ public class Abelha : MonoBehaviour
 {
     public GameObject OrigemDaBala, Bala;
     public float IntervaloDeDisparo;
-    public float timer1, timer2;
+    private float timer1, timer2;
     public Area Area;
     public Animator Animator;
-    public bool Morrendo;
+    private bool Morrendo;
 
+    private void Start()
+    {
+        timer1 = 0;
+        timer2 = 0;
+    }
     // Update is called once per frame
     void Update()
     {
